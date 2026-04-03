@@ -1,2 +1,62 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+
+# Python source files
+*.py text diff=python
+*.pyw text diff=python
+*.pyi text diff=python
+
+# Web files
+*.html text diff=html
+*.css text diff=css
+*.js text diff=javascript
+*.json text eol=lf
+*.xml text
+*.yaml text
+*.yml text
+*.toml text
+*.env text
+*.env.example text
+
+# Documentation
+*.md text diff=markdown
+*.txt text
+*.rst text
+
+# Requirements & config
+requirements.txt text
+requirements-dev.txt text
+Pipfile text
+pyproject.toml text
+setup.cfg text
+setup.py text diff=python
+
+# Binary files - no diffs
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.whl binary
+*.pyc binary
+*.pyd binary
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Force bash scripts to LF
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Windows scripts keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Linguist - GitHub language stats
+*.py linguist-language=Python
+*.html linguist-language=HTML
+*.css linguist-language=CSS
